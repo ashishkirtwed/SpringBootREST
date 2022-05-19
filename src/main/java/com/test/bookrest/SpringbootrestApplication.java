@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaRepositories("com.test.dao")
 @EntityScan("com.test.Entity")
-@ComponentScan({"com.test.bookrest","com.test.controller","com.test.dao.BookRepository","com.test.services"})
+@ComponentScan({"com.test.bookrest","com.test.controller","com.test.dao.BookRepository","com.test.services","com.test.helper"})
 public class SpringbootrestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootrestApplication.class, args);
