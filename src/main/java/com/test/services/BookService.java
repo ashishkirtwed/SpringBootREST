@@ -66,6 +66,7 @@ public class BookService {
 //			return b;
 //		}).collect(Collectors.toList());
 		book.setId(bookId);
+		//this.bookRepository.save(book);
 		this.bookRepository.save(book);
 	}
 }

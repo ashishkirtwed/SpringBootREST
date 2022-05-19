@@ -75,8 +75,9 @@ public class BookController {
 	public ResponseEntity<Book> updateBook(@RequestBody Book book,@PathVariable("bookId") int bookId) {
 		Book b = null;
 		try {
-		this.bookService.updateBook(book,bookId);
-			return ResponseEntity.of(Optional.of(b));
+			this.bookService.updateBook(book,bookId);
+			System.out.println(book);
+			return ResponseEntity.of(Optional.of(book));
 		}
 		catch(Exception e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
